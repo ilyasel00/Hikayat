@@ -1,0 +1,12 @@
+/* ملف تعديلات سريعة لدعم RTL وتحسين الشكل */
+body { direction: rtl; font-family: "Noto Kufi Arabic", "Segoe UI", Tahoma, sans-serif; }
+.site-header .inner { display: flex; justify-content: space-between; align-items: center; }
+.post { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.post .meta { color: #666; font-size: 0.9rem; }
+/* تحسين الصور داخل القصص */
+.content img { max-width: 100%; height: auto; border-radius: 8px; }
+
+/* Dark mode support (PaperMod يملك وضع افتراضي لكن يمكن تخصيصه) */
+@media (prefers-color-scheme: dark) {
+  body { background: #0f1724; color: #d1d5db; }
+}
