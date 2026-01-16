@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>قصة</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header onclick="location.href='index.html'" style="cursor:pointer">
+⬅️ الرجوع إلى حكايات
+</header>
+
+<div class="container">
+  <h1 id="title"></h1>
+  <p class="category" id="category"></p>
+  <p id="content"></p>
+</div>
+
+<script src="stories.js"></script>
+<script>
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+const story = stories.find(s => s.id == id);
+
+if (story) {
+  document.getElementById("title").innerText = story.title;
+  document.getElementById("category").innerText = story.category;
+  document.getElementById("content").innerText = story.content;
+}
+</script>
+
+</body>
+</html>
