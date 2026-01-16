@@ -1,0 +1,37 @@
+baseURL = "https://your-username.github.io/stories-blog/"
+languageCode = "ar"
+defaultContentLanguage = "ar"
+title = "مدونة القصص"
+theme = "PaperMod"
+
+# Enable RSS and other outputs
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[params]
+  description = "مدونة للقصص القصيرة - مكتوبة بالعربية"
+  author = "اسمك"
+  showReadingTime = true
+  dateFormat = "2006-01-02"
+  # PaperMod params
+  disableDarkMode = false
+  language = "ar"
+  # RTL support flag (we will add CSS override)
+  rtl = true
+
+[permalinks]
+  posts = "/posts/:year/:month/:slug/"
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark.renderer]
+    unsafe = true
+
+[params.social]
+  github = "https://github.com/your-username"
+
+[languages]
+  [languages.ar]
+    languageName = "العربية"
+    weight = 1
+    contentDir = "content"
